@@ -18,10 +18,9 @@ class Item:
         return f"Item(name: {self.name}, price: {self.price:.2f}, quantity: {self.quantity})"
 
     def __repr__(self):
-
         return f"Item(name={self.name}, price={self.price}, quantity={self.quantity})"
 
-     def read_data_from_csv(cls, file_path: str):
+    def read_data_from_csv(cls, file_path: str):
             with open(file_path, mode='r') as file:
                 reader = csv.DictReader(file)
                 for row in reader:
